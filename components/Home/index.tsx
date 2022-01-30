@@ -3,11 +3,11 @@ import { Cards } from "@components/Cards/index"
 import { CONFIG } from "../../lib/stuffs"
 export const Home:FC = () => {
     return (
-        <div className="w-screen h-full">
-            <h1 className="text-gray-400 text-center my-20">zort</h1>
-            <h1 className="text-gray-300 text-center font-semibold text-4xl">About Me</h1>
-            <div className="flex flex-col-2 h-screen justify-between">
-                {CONFIG.Cards.map((v,index) => ( 
+        <div className="mt-20 flex justify-center">
+            <div className="w-10/12">
+                <p className="text-center text-3xl text-gray-400 font-semibold">Abut mue</p>
+                    <div className="grid grid-cols-2 text-center">
+                    {CONFIG.Cards.map((v,index) => ( 
                     <div className="">
                         <Cards title={v.title} description={v.description} link={v.link} key={index}/> 
                     </div>
@@ -15,5 +15,19 @@ export const Home:FC = () => {
                 )}        
                 </div>
             </div>
+        </div>
     )
 }
+
+/*
+
+            <div className="grid grid-cols-2 gap-4 ">
+                {CONFIG.Cards.map((v,index) => ( 
+                    <div className="w-1/2">
+                        <Cards title={v.title} description={v.description} link={v.link} key={index}/> 
+                    </div>
+                )
+                )}        
+                </div>
+
+*/
