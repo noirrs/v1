@@ -8,7 +8,7 @@ export const HomeCardDesing:FC = () => {
                 <p className="text-center text-[#6C63FF] text-3xl md:text-gray-200 font-semibold">Page Directory</p>
                     <div className="grid  md:grid-cols-2 text-start gap-2 mt-4 ml-1">
                     {CONFIG.Cards.map((v,index) => ( 
-                    <div className="">
+                    <div className="" key={index}>
                         <Card title={v.title} description={v.description} link={v.link} key={index}/> 
                     </div>
                 )
