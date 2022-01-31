@@ -1,11 +1,13 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
-import { Home } from "@components/Home/index"
+import { HomeCardDesing } from "@components/HomeCardDesign"
+import { About } from "@components/About"
 const Main: NextPage = () => {
   return (
     <div className="w-full h-screen">
-      <Home/>
+      <About/>
+      <HomeCardDesing/>
     </div>
   )
 }

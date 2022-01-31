@@ -1,24 +1,25 @@
 export const CONFIG = {
+    DiscordUserID: "922078187788308510",
     Cards: [
         {
             title: "Repositories",
             description: "💫 My Github Repositories",
-            link: "about/repos"
+            link: "/repos"
         },
         {
             title: "Projects",
             description: "💫 My Projects",
-            link: "about/projects"
+            link: "/projects"
         },
         {
-            title: "Plans",
-            description: "💫 My Plans for Feature",
-            link: "about/plans"
+            title: "My Experiences",
+            description: "💫 My Experiences and knowledge",
+            link: "/experiences"
         },
         {
             title: "Blog",
-            description: "💫 lorem ipsum lorem ipsum lorem ipsum lorem ipsum lore",
-            link: "blogs"
+            description: "💫 Blogs",
+            link: "/blogs"
         },
     ] as ICards[]
 }
