@@ -18,16 +18,3 @@ export const HomeCardDesing:FC = () => {
         </div>
     )
 }
-
-/*
-
-            <div className="grid grid-cols-2 gap-4 ">
-                {CONFIG.Cards.map((v,index) => ( 
-                    <div className="w-1/2">
-                        <Cards title={v.title} description={v.description} link={v.link} key={index}/> 
-                    </div>
-                )
-                )}        
-                </div>
-
-*/

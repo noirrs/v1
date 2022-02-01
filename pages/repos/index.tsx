@@ -34,6 +34,7 @@ const Repos:FC = function (){
     return (
         <h1 className="text-6xl text-center text-white ">DEMO</h1>
     )
+   
 }
 
 export default Repos

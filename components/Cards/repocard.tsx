@@ -12,7 +12,10 @@ export const RepoCard:FC<IProps> = function ({language,stars,reponame,repodesc})
                    <h1 className="text-center text-white">{reponame}</h1>
                    <p className="text-gray-300 mx-2">{repodesc}</p>
                    <p className="flex text-yellow-300 mx-2">{stars} <div className="mt-1 ml-0.5"><AiTwotoneStar /></div></p>
+                   <div className="flex justify-end">
+                   <div className="w-2.5 h-2.5 rounded-full bg-gray-300 mt-2"></div>
                    <p className="text-gray-200 mx-2">{language}</p>
+                   </div>
                </div>
          
     )
