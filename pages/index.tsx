@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
-import { HomeCardDesing } from "@components/HomeCardDesign"
+import { HomeCardDesing } from "@components/Design/home"
 import { About } from "@components/About"
 const Main: NextPage = () => {
   return (
