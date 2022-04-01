@@ -1,4 +1,4 @@
-### A Portfolio Website
+## A Portfolio Website
 
 ## Getting Started
 
