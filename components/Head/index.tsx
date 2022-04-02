@@ -19,7 +19,7 @@ export const Heads:FC<IProps> = function({page}){
         <meta property="og:title" content="Noir"/>
         <meta property="og:description" content="I'm backend developer who has also experiences in frontend projects using with Next ad Tailwind"/>
         <meta property="og:image" content="https://noirs.me/assets/pp.png"/>
-        <meta property="theme-color" content="#d6cdf9"/>
+        <meta property="theme-color" content="#6366f1"/>
 
         <meta property="twitter:url" content="https://noirs.me"/>
         <meta property="twitter:title" content="noirs.me"/>
