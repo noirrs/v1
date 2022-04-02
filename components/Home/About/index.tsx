@@ -32,8 +32,6 @@ export const About:FC = () => {
         case "idle":
           scolor ="#eddf47"
           statuso = "Idle"
-        default:
-          statuso = "Offline"
           break;
       }
       if(!loading && status.activities.length > 0) {
@@ -58,7 +56,7 @@ export const About:FC = () => {
       <div className="mx-auto mt-5 flex">
       <div data-tip data-for="statuso" className="w-2.5	h-2.5 rounded-full text-gray-300 mt-2" style={{backgroundColor: scolor || "#747F8D"}}></div>
       <p data-tip data-for="zort"  className="ml-2 text-base text-gray-300">{activities || "Nothing is playing right now"}</p>
-      <ReactTooltip place="left" backgroundColor="black" effect="solid" id="statuso">{statuso }</ReactTooltip>
+      <ReactTooltip place="left" backgroundColor="black" effect="solid" id="statuso">{statuso}</ReactTooltip>
       {activities && <ReactTooltip place="bottom" backgroundColor="black" effect="solid" id="zort">{details}</ReactTooltip>}
       </div>
       </div>
