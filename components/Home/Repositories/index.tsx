@@ -37,11 +37,12 @@ export const Repositories: FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 lg:ml-14 mt-4 gap-y-4">
         {
        
-       repositories && repositories.filter((a:any) => !a.forked).map((repo:any) => { 
+       repositories && repositories.filter((a:any) => !a.forked).map((repo:any,index:Number) => { 
           return (
             <Tilt
             className="w-96 rounded-lg h-28 mx-auto  over:scale-110 bg-[#1f2023]"
             options={{ max: 20 }}
+            key={index}
           >
             <Link href={repo.url}>
               <a href={repo.url} target="_blank" rel="noreferrer">
