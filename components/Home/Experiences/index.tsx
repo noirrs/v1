@@ -1,7 +1,7 @@
 import type { FC } from "react";
 import Link from "next/link";
 import  Tilt  from "react-tilt";
-import { SiTypescript,SiGoland } from "react-icons/si";
+import { SiTypescript,SiGoland,SiNextdotjs } from "react-icons/si";
 import { DiNodejs } from "react-icons/di";
 import { RiReactjsFill} from "react-icons/ri";
 export const Experiences: FC = () => {
@@ -29,28 +29,29 @@ export const Experiences: FC = () => {
       <div className="grid lg:grid-cols-2 grid-cols-1 grid-row-2 lg:mt-60 mt-20 mx-aut lg:w-5/12 xl:w-4/12 gap-y-2 lg:mr-10 gap-x-2" >
 
     
-      <Tilt className="xl:w-56 lg:w-48 lg:h-24 bg-[#222533] rounded-xl w-9/12 h-24 mx-auto">
-            <RiReactjsFill className="w-8 h-12 mt-3 mx-auto text-blue-300" />
+      <Tilt className="xl:w-56 lg:w-48 lg:h-24 bg-[#1f2023] rounded-xl w-9/12 h-24 mx-auto">
+            <SiNextdotjs className="w-8 h-12 mt-3 mx-auto text-black" />
+            <p className="text-white text-sm text-center font-extrabold">
+              For 1 years
+            </p>
+          </Tilt>
+          <Tilt className="xl:w-56 lg:w-48 lg:h-24 bg-[#1f2023] rounded-xl w-9/12 h-24 mx-auto">
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/go/go-original.svg" className="w-8 h-12 mx-auto mt-3" />
+            <p className="text-white text-sm text-center font-extrabold">
+              For 1 years
+            </p>
+          </Tilt>
+          <Tilt className="xl:w-56 lg:w-48 bg-[#1f2023] rounded-xl w-9/12 h-24 mx-auto">
+       
+            <img src="https://img.icons8.com/color/344/nodejs.png" className="w-12 h-12 mt-3 mx-auto" />
             <p className="text-white text-sm text-center font-extrabold">
               For 4 years
             </p>
           </Tilt>
-          <Tilt className="xl:w-56 lg:w-48 lg:h-24 bg-[#222533] rounded-xl w-9/12 h-24 mx-auto">
-            <SiGoland className="w-8 h-12 mt-3 mx-auto text-blue-300" />
+          <Tilt className="xl:w-56 lg:w-48 bg-[#1f2023] rounded-xl w-9/12 h-24 mx-auto">
+            <SiTypescript className="w-8 h-12 mt-3 mx-auto text-[#1976D2]" />
             <p className="text-white text-sm text-center font-extrabold">
-              For 4 years
-            </p>
-          </Tilt>
-          <Tilt className="xl:w-56 lg:w-48 bg-[#222533] rounded-xl w-9/12 h-24 mx-auto">
-            <DiNodejs className="w-8 h-12 mt-3 mx-auto text-blue-300" />
-            <p className="text-white text-sm text-center font-extrabold">
-              For 4 years
-            </p>
-          </Tilt>
-          <Tilt className="xl:w-56 lg:w-48 bg-[#222533] rounded-xl w-9/12 h-24 mx-auto">
-            <SiTypescript className="w-8 h-12 mt-3 mx-auto text-blue-300" />
-            <p className="text-white text-sm text-center font-extrabold">
-              For 4 years
+              For 2 years
             </p>
           </Tilt>
       </div>

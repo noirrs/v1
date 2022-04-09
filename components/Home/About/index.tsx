@@ -1,12 +1,12 @@
 import type { FC } from "react"
 import { useState, useEffect } from "react"
 import { useLanyard } from "react-use-lanyard";
-import { CONFIG } from "../../../lib/stuffs";
+import { DEFAULTS } from "../../../lib/stuffs";
 import ReactTooltip from 'react-tooltip';
 import Tilt from 'react-tilt';
 import Link from "next/link"
 export const About:FC = () => {
-  let userid = CONFIG.DiscordUserID
+  let userid = DEFAULTS.DiscordUserID
   let scolor;
   let activities;
   let details;
