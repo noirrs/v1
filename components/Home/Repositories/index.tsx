@@ -44,7 +44,7 @@ export const Repositories: FC = () => {
             options={{ max: 20 }}
           >
             <Link href={repo.url}>
-              <a href={repo.url} target="_blank">
+              <a href={repo.url} target="_blank" rel="noreferrer">
                 <div className="">
                 <div className="flex">
                   <div className="flex flex-col mx-auto ml-4 mt-4">

@@ -63,7 +63,7 @@ export const About:FC = () => {
       <div className="lg:w-9/12 lg:my-auto">
       <p className="text-gray-200 text-center font-bold text-5xl mt-10 lg:mt-32">Taha Kaçmaz</p>
       <p className="text-center text-indigo-600 font-semibold mt-1">Backend Developer</p>
-      <p className="text-gray-400 text-center mx-5 md:mx-32 lg:mt-5">I'm a self-educated backend developer. I'm interested in developing frontend projects too. I use mostly <Link  href="https://nextjs.org/"><a target="_blank"><span className="link link-underline link-underline-black text-gray-200">NextJS</span></a></Link> and <Link href="https://tailwindcss.com/"><a target="_blank"><span className="link link-underline link-underline-black text-gray-100">TailwindCSS</span></a></Link> in frontend development and <Link href="https://www.typescriptlang.org/"><a target="_blank"><span className="link link-underline link-underline-black text-gray-100">Typescript</span></a></Link> in backend development</p>
+      <p className="text-gray-400 text-center mx-5 md:mx-32 lg:mt-5">I'm a self-educated backend developer. I'm interested in developing frontend projects too. I use mostly <Link  href="https://nextjs.org/"><a target="_blank" rel="noreferrer"><span className="link link-underline link-underline-black text-gray-200">NextJS</span></a></Link> and <Link href="https://tailwindcss.com/"><a target="_blank" rel="noreferrer"><span className="link link-underline link-underline-black text-gray-100">TailwindCSS</span></a></Link> in frontend development and <Link href="https://www.typescriptlang.org/"><a target="_blank" rel="noreferrer"><span className="link link-underline link-underline-black text-gray-100">Typescript</span></a></Link> in backend development</p>
     </div>
     </div>
   )

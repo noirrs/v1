@@ -27,7 +27,7 @@ export const Projects: FC = () => {
             options={{ max: 20 }}
           >
             <Link href="https://github.com/Noirrs/webpage">
-              <a href="https://github.com/Noirrs/webpage" target="_blank">
+              <a href="https://github.com/Noirrs/webpage" target="_blank" rel="noreferrer">
                 <div className="flex">
                   <MdContactPage className="w-20 h-20 my-auto mt-2 text-gray-300" />
                   <div className="flex flex-col mx-auto ml-12 mt-4">
@@ -46,7 +46,7 @@ export const Projects: FC = () => {
             options={{ max: 20 }}
           >
             <Link href="https://github.com/Noirrs/webpage">
-              <a href="https://github.com/Noirrs/webpage" target="_blank">
+              <a href="https://github.com/Noirrs/webpage" target="_blank" rel="noreferrer">
                 <div className="flex">
                   <HiTerminal className="w-16 h-16 my-auto mt-4 ml-2 text-pink-400" />
                   <div className="flex flex-col mx-auto ml-12 mt-6">
@@ -63,7 +63,7 @@ export const Projects: FC = () => {
             options={{ max: 20 }}
           >
             <Link href="https://covercounter.tk">
-              <a href="https://covercounter.tk" target="_blank">
+              <a href="https://covercounter.tk" target="_blank" rel="noreferrer">
                 <div className="flex">
                   <GiBottleCap className="w-16 h-16 my-auto mt-4 ml-2 text-blue-400" />
                   <div className="flex flex-col mx-auto ml-12 mt-5">
@@ -84,7 +84,7 @@ export const Projects: FC = () => {
             options={{ max: 20 }}
           >
             <Link href="https://github.com/ReponseApp">
-              <a href="https://github.com/ReponseApp" target="_blank">
+              <a href="https://github.com/ReponseApp" target="_blank" rel="noreferrer">
                 <div className="flex">
                   <IoChatbubblesSharp className="w-12 h-12 my-auto mt-6 ml-2 text-green-400" />
                   <div className="flex flex-col mx-auto ml-12 mt-6">
