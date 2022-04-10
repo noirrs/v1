@@ -45,8 +45,8 @@ export const Projects: FC = () => {
             className="w-96 rounded-lg h-24 mx-auto   bg-[#1f2023]"
             options={{ max: 20 }}
           >
-            <Link href="www.npmjs.com/package/blackly">
-              <a href="www.npmjs.com/package/blackly" target="_blank" rel="noreferrer">
+            <Link href="https://www.npmjs.com/package/blackly">
+              <a href="https://www.npmjs.com/package/blackly" target="_blank" rel="noreferrer">
                 <div className="flex">
                   <HiTerminal className="w-16 h-16 my-auto mt-4 ml-2 text-pink-400" />
                   <div className="flex flex-col mx-auto ml-12 mt-6">
