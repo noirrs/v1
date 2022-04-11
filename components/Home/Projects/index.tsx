@@ -18,10 +18,10 @@ export const Projects: FC = () => {
   return (
     <div className="w-full">
       <div className="lg:mt-60 mt-40">
-        <p className="text-white font-bold text-3xl lg:w-1/12 lg:min-w-max lg:ml-24 text-center">
+        <p className="text-white font-bold text-3xl lg:w-1/12 lg:min-w-max md:ml-24 text-center">
           Projects
         </p>
-        <div className="grid md:grid-cols-2  xl:grid-cols-3 lg:ml-14 grid-cols-1 mt-4 gap-y-5 mr-4">
+        <div className="grid md:grid-cols-2  xl:grid-cols-3 xl:ml-14 grid-cols-1 mt-4 gap-y-5 mr-4">
           <Tilt
             className="w-96 rounded-lg h-24 mx-auto  over:scale-110 bg-[#1f2023]"
             options={{ max: 20 }}

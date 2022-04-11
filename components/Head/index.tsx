@@ -21,7 +21,7 @@ export const Heads:FC<IProps> = function({page}){
         <meta property="og:image" content="https://noirs.me/assets/pp.png"/>
         <meta name="author" content="Noir" />
         <meta name="keywords" content="Noir, Noirrs, Noirr, noirs.me, Noirs.me, Noirscode, noir, blackly, backend, developer, self-taugh, self-educated"/>
-        <meta http-equiv="refresh" content="30" />
+        <meta httpEquiv="refresh" content="30" />
         <meta property="theme-color" content="#6366f1"/>
   
 
