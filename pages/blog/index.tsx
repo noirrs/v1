@@ -18,7 +18,9 @@ const Blogs: NextPage = ({ a }: any) => {
                 let tags = data.tags.split(",");
                 if (index < 3)
                   return (
+                    <div key={index}>
                     < BlogCard data={data} tags={tags} key={index}/>
+                    </div>
                   );
               })}
           </div>
@@ -32,7 +34,9 @@ const Blogs: NextPage = ({ a }: any) => {
                 let tags = data.tags.split(",");
               
                   return (
-                   < BlogCard data={data} tags={tags} key={index}/>
+                    <div key={index}>
+                    < BlogCard data={data} tags={tags} key={index}/>
+                    </div>
                   );
               })}
           </div>
