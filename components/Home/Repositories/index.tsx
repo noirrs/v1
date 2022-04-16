@@ -29,7 +29,7 @@ export const Repositories: FC = () => {
 
     })
     return (
-    <div className="">
+    <div className="" id="repos">
        <div className="lg:mt-60 mt-40">
         <p className="text-white font-bold text-3xl lg:w-1/12 lg:min-w-max lg:ml-24 text-center">
           Repositories

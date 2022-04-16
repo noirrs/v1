@@ -16,9 +16,9 @@ interface IProps {
 
 export const Projects: FC = () => {
   return (
-    <div className="w-full">
+    <div className="w-full" id="projects"> 
       <div className="lg:mt-60 mt-40">
-        <p className="text-white font-bold text-3xl lg:w-1/12 lg:min-w-max md:ml-24 text-center">
+        <p className="text-white font-bold text-3xl lg:w-1/12 lg:min-w-max lg:ml-24 text-center">
           Projects
         </p>
         <div className="grid md:grid-cols-2  xl:grid-cols-3 xl:ml-14 grid-cols-1 mt-4 gap-y-5 mr-4">
@@ -48,7 +48,7 @@ export const Projects: FC = () => {
             <Link href="https://www.npmjs.com/package/blackly">
               <a href="https://www.npmjs.com/package/blackly" target="_blank" rel="noreferrer">
                 <div className="flex">
-                  <HiTerminal className="w-16 h-16 my-auto mt-4 ml-2 text-pink-400" />
+                  <HiTerminal className="w-16 h-16 my-auto mt-4 ml-2 text-indigo-500" />
                   <div className="flex flex-col mx-auto ml-12 mt-6">
                     <p className=" text-white text-2xl font-bold">Blackly</p>
                     <p className="text-gray-200 text-sm">An Useful CLI Tool</p>
@@ -71,7 +71,7 @@ export const Projects: FC = () => {
                       Cover Counter
                     </p>
                     <p className="text-gray-200 text-sm">
-                      An Simple Website for Follow Bottlecap Donates
+                      A Simple Website for Follow Bottlecap Donates
                     </p>
                   </div>
                 </div>

@@ -3,16 +3,20 @@ import { Heads } from "@components/Head";
 import Tilt from "react-tilt";
 import Link from "next/link";
 import { BiTimeFive } from "react-icons/bi";
+import { GoBack } from "@components/Utils/GoBack";
 const Blogs: NextPage = ({ a }: any) => {
   return (
     <div className="w-full h-screen">
       <Heads page="Blog" />
       <div>
+        <div className="ml-2 mt-2">
+        <GoBack url="/"/>
+        </div>
         <p className="text-gray-300 text-2xl font-extrabold text-center md:text-left md:ml-20 mt-20">
           Latest Blog Posts
         </p>
       
-        <div className="grid md:grid-cols-2  xl:grid-cols-3 xl:ml-10 grid-cols-1 mt-4 gap-y-5 mr-4">
+        <div className="ml-1 grid md:grid-cols-2  xl:grid-cols-3 xl:ml-10 grid-cols-1 mt-4 gap-y-5 mr-4">
             {a.length > 0 &&
               a.map((data: any, index: number) => {
                 let tags = data.tags.split(",");
@@ -28,7 +32,7 @@ const Blogs: NextPage = ({ a }: any) => {
           <p className="text-gray-300 text-2xl font-extrabold text-center md:text-left md:ml-20 mt-20">
           All Blog Posts
         </p>
-        <div className="grid md:grid-cols-2  xl:grid-cols-3 xl:ml-10 grid-cols-1 mt-4 gap-y-5 mr-4">
+        <div className="ml-1 grid md:grid-cols-2  xl:grid-cols-3 xl:ml-10 grid-cols-1 mt-4 gap-y-5 mr-4">
             {a.length > 0 &&
               a.map((data: any, index: number) => {
                 let tags = data.tags.split(",");
@@ -50,8 +54,8 @@ export default Blogs;
 
 const fs = require("fs");
 const matter = require("gray-matter");
+const path = require("path");
 export function getStaticProps() {
-  const path = require("path");
   const postsDir = path.join(process.cwd(), "posts");
 
   let doba = fs.readdirSync(postsDir);
@@ -62,7 +66,7 @@ export function getStaticProps() {
     duba.push(matter(str).data);
   });
 
-  console.log(duba);
+
 
   return {
     props: {
@@ -73,12 +77,11 @@ export function getStaticProps() {
 
 function BlogCard({data,tags}:any){
   return (
-    <Tilt
-    className="w-96 rounded-lg h-32 mx-auto  over:scale-110 bg-[#1f2023]"
-    options={{ max: 20 }}
+    <div
+    className="w-96 rounded-lg h-32 mx-auto  over:scale-110 bg-[#1f2023] transition duration-500 ease-in-out hover:scale-110"
   >
-    <Link href={`/posts/${data && data.url}`}>
-      <a href={`/posts/${data && data.url}`} rel="noreferrer">
+    <Link href={`/blog/${data && data.url}`}>
+      <a href={`/blog/${data && data.url}`} rel="noreferrer">
         <div className="flex">
           <img
             src={data && data.photo}
@@ -104,9 +107,9 @@ function BlogCard({data,tags}:any){
             <div className="flex mt-2">
               {tags &&
                 tags.length > 0 &&
-                tags.map((tag: string) => (
-                  <div className="p-1 bg-neutral-500 mr-2 rounded">
-                    <p className="text-sm font-medium">
+                tags.map((tag: string, index: number) => (
+                  <div className="p-1  bg-gradient-to-r from-indigo-500 to-blue-400 text-white mr-2 rounded" key={index}>
+                    <p className="text-sm font-medium ">
                       {tag}
                     </p>
                   </div>
@@ -116,6 +119,6 @@ function BlogCard({data,tags}:any){
         </div>
       </a>
     </Link>
-  </Tilt>
+  </div>
   )
 }
