@@ -94,7 +94,7 @@ export const About: FC = () => {
       <PageDir />
       </div>
       <div className="lg:hidden mt-10 flex text-center justify-center">
-      <Link href="/blog"><a href="/blog" className="text-white mr-5 bg-indigo-600 transition hover:bg-indigo-700 px-4 py-3 rounded -mt-3"><p>Blogs</p></a></Link>
+      <Link href="/blog"><p className="text-white mr-5 bg-indigo-600 transition hover:bg-indigo-700 px-4 py-3 rounded -mt-3">Blogs</p></Link>
       <a href="#aboutme" className="text-white transition mr-5 hover:text-white/80">About Me</a>
       <a href="#projects" className="text-white transition hover:text-white/80 mr-5">Projects</a>
       <a href="#repos" className="text-white transition hover:text-white/80">Repositories</a>
