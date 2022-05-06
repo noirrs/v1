@@ -38,10 +38,6 @@ kbd {
 
   }
   
-  /* Track */
-
-  
-  /* Handle */
   ::-webkit-scrollbar-thumb {
     background: #9883e5;
     border-radius: 5px;

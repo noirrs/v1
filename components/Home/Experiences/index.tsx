@@ -12,12 +12,12 @@ export const Experiences: FC = () => {
         <h1 className="text-white font-bold text-3xl lg:w-1/12 lg:min-w-max lg:ml-24 text-center">
           About Me
         </h1>
-        <p className="text-gray-200 text-base lg:ml-24 lg:text-left mt-2 m-4">
+        <p className="text-gray-200 text-base lg:ml-24 lg:text-left mt-2 m-4 text-center">
           Hello I'm a student at Galatasaray High School. I love playing video
           games and developing useful open-source projects in my free time. I've
           working on backend stuffs since 2018.
         </p>
-        <p className="text-gray-200 text-base lg:ml-24 lg:text-left mt-4 m-4">
+        <p className="text-gray-200 text-base lg:ml-24 lg:text-left mt-4 m-4 text-center">
           As a backend developer, I learnt and keep using these technologies in
           my projects. You can check out my projects on my{" "}
           <span className="link link-underline link-underline-black text-gray-300">
