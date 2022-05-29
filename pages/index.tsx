@@ -11,10 +11,9 @@ const Main: NextPage = () => {
   const notify = () => toast("Please click the avatar for the page rootes");
   useEffect(() => {
     if(typeof window != "undefined"){
-      if(!window.localStorage.getItem("Routeinfo")) {
-        console.log(window.localStorage.getItem("Routeinfo"));
+      //if(!window.localStorage.getItem("Routeinfo")) {
         toast("Please click the avatar for the page rootes");
-      }
+      //}
       window.localStorage.setItem("Routeinfo", "true")
 
     } 

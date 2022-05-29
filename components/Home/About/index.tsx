@@ -126,7 +126,7 @@ export const About: FC = () => {
             effect="solid"
             id="statuso"
           >
-            {statuso}
+            {statuso && statuso}
           </ReactTooltip>
           {activities && (
             <ReactTooltip
@@ -146,7 +146,7 @@ export const About: FC = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <BsGithub className="w-6 h-6 text-white hover:text-emerald-500 transition duration-500" />
+            <BsGithub className="w-6 h-6 text-white hover:text-black  transition duration-500" />
           </a>
           <a
             className="w-6 h-6 mr-3"
@@ -170,7 +170,7 @@ export const About: FC = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <HiMail className="w-6 h-6 text-white hover:text-[#1C70E8] transition duration-500" />
+            <HiMail className="w-6 h-6 text-white hover:text-gray-500 transition duration-500" />
           </a>
           <a
             className="w-6 h-6 mr-3"

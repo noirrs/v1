@@ -27,30 +27,30 @@ export const Experiences: FC = () => {
           </span>
         </p>
       </div>
-      <div className="grid lg:grid-cols-2 grid-cols-1 grid-row-2 lg:mt-60 mt-20 mx-aut lg:w-5/12 xl:w-4/12 gap-y-2 lg:mr-10 gap-x-2" >
+      <div className="grid lg:grid-cols-2 grid-cols-1 grid-row-2 lg:mt-60 mt-20 mx-aut lg:w-5/12 xl:w-4/12 gap-y-2 lg:mr-10 gap-x-2 " >
 
     
-      <Tilt className="xl:w-56 lg:w-48 lg:h-24 bg-[#1E1F2B] rounded-xl w-9/12 h-24 mx-auto">
+      <Tilt className="xl:w-56 lg:w-48 lg:h-24 bg-[#6366f1] rounded-xl w-9/12 h-24 mx-auto cursor-pointer">
             <SiNextdotjs className="w-8 h-12 mt-3 mx-auto text-black" />
             <p className="text-white text-sm text-center font-extrabold">
               For 1 years
             </p>
           </Tilt>
-          <Tilt className="xl:w-56 lg:w-48 lg:h-24 bg-[#1E1F2B] rounded-xl w-9/12 h-24 mx-auto">
+          <Tilt className="xl:w-56 lg:w-48 lg:h-24 bg-[#6366f1] rounded-xl w-9/12 h-24 mx-auto cursor-pointer">
             <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/go/go-original.svg" className="w-8 h-12 mx-auto mt-3" />
             <p className="text-white text-sm text-center font-extrabold">
               For 1 years
             </p>
           </Tilt>
-          <Tilt className="xl:w-56 lg:w-48 bg-[#1E1F2B] rounded-xl w-9/12 h-24 mx-auto">
+          <Tilt className="xl:w-56 lg:w-48 bg-indigo-500 rounded-xl w-9/12 h-24 mx-auto cursor-pointer">
        
-            <img src="https://img.icons8.com/color/344/nodejs.png" className="w-12 h-12 mt-3 mx-auto" />
+            <img src="https://img.icons8.com/color/344/nodejs.png" className="w-12 mt-3 mx-auto" />
             <p className="text-white text-sm text-center font-extrabold">
               For 4 years
             </p>
           </Tilt>
-          <Tilt className="xl:w-56 lg:w-48 bg-[#1E1F2B] rounded-xl w-9/12 h-24 mx-auto">
-            <SiTypescript className="w-8 h-12 mt-3 mx-auto text-[#1976D2]" />
+          <Tilt className="xl:w-56 lg:w-48 bg-indigo-500 rounded-xl w-9/12 h-24 mx-auto cursor-pointer">
+            <SiTypescript className="w-8 h-12 mt-3 mx-auto text-black" />
             <p className="text-white text-sm text-center font-extrabold">
               For 2 years
             </p>
