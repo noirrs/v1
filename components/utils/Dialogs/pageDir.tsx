@@ -51,7 +51,7 @@ export const PageDir: FC = ({ clicked }: any) => {
                 description={route.description}
                 link={route.url}
                 router={router}
-                id={index}
+                key={index}
               />
             );
           })}
