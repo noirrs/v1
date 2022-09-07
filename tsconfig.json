@@ -16,7 +16,8 @@
     "baseUrl": ".",
     "incremental": true,
     "paths": {
-      "@components/*": ["./components/*"]
+      "@components/*": ["./components/*"],
+      "@utils/*": ["./utils/*"]
     },
     "typeRoots": [
         "../node_modules/@types",

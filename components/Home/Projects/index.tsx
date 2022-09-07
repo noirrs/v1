@@ -16,18 +16,22 @@ interface IProps {
 
 export const Projects: FC = () => {
   return (
-    <div className="w-full" id="projects"> 
+    <div className="w-full" id="projects">
       <div className="lg:mt-60 mt-40">
         <p className="text-white font-bold text-3xl lg:w-1/12 lg:min-w-max lg:ml-24 text-center">
           Projects
         </p>
         <div className="grid md:grid-cols-2  xl:grid-cols-3 xl:ml-14 grid-cols-1 mt-4 gap-y-5 mr-4">
           <Tilt
-            className="w-96 rounded-lg h-24 mx-auto  over:scale-110 bg-[#1f2023]"
+            className="w-96 rounded-lg h-24 mx-auto  over:scale-110 bg-[#272930]"
             options={{ max: 20 }}
           >
             <Link href="https://github.com/Noirrs/webpage">
-              <a href="https://github.com/Noirrs/webpage" target="_blank" rel="noreferrer">
+              <a
+                href="https://github.com/Noirrs/webpage"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <div className="flex">
                   <MdContactPage className="w-20 h-20 my-auto mt-2 text-gray-300" />
                   <div className="flex flex-col mx-auto ml-12 mt-4">
@@ -42,11 +46,15 @@ export const Projects: FC = () => {
           </Tilt>
 
           <Tilt
-            className="w-96 rounded-lg h-24 mx-auto   bg-[#1f2023]"
+            className="w-96 rounded-lg h-24 mx-auto   bg-[#272930]"
             options={{ max: 20 }}
           >
             <Link href="https://www.npmjs.com/package/blackly">
-              <a href="https://www.npmjs.com/package/blackly" target="_blank" rel="noreferrer">
+              <a
+                href="https://www.npmjs.com/package/blackly"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <div className="flex">
                   <HiTerminal className="w-16 h-16 my-auto mt-4 ml-2 text-indigo-500" />
                   <div className="flex flex-col mx-auto ml-12 mt-6">
@@ -59,11 +67,15 @@ export const Projects: FC = () => {
           </Tilt>
 
           <Tilt
-            className="w-96 rounded-lg h-24 mx-auto bg-[#1f2023] "
+            className="w-96 rounded-lg h-24 mx-auto bg-[#272930] "
             options={{ max: 20 }}
           >
             <Link href="https://covercounter.tk">
-              <a href="https://covercounter.tk" target="_blank" rel="noreferrer">
+              <a
+                href="https://covercounter.tk"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <div className="flex">
                   <GiBottleCap className="w-16 h-16 my-auto mt-4 ml-2 text-blue-400" />
                   <div className="flex flex-col mx-auto ml-12 mt-5">
@@ -80,11 +92,15 @@ export const Projects: FC = () => {
           </Tilt>
 
           <Tilt
-            className="w-96 rounded-lg h-24 mx-auto bg-[#1f2023]"
+            className="w-96 rounded-lg h-24 mx-auto bg-[#272930]"
             options={{ max: 20 }}
           >
             <Link href="https://github.com/ReponseApp">
-              <a href="https://github.com/ReponseApp" target="_blank" rel="noreferrer">
+              <a
+                href="https://github.com/ReponseApp"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <div className="flex">
                   <IoChatbubblesSharp className="w-12 h-12 my-auto mt-6 ml-2 text-green-400" />
                   <div className="flex flex-col mx-auto ml-12 mt-6">

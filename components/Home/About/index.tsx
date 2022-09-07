@@ -5,11 +5,22 @@ import { DEFAULTS } from "../../../lib/stuffs";
 import ReactTooltip from "react-tooltip";
 import Tilt from "react-tilt";
 import Link from "next/link";
-import { PageDir, ID } from "@components/Utils/Dialogs/pageDir";
+import { PageDir, ID } from "@utils/Dialogs/pageDir";
 import { BsGithub, BsLinkedin, BsSpotify, BsTwitter } from "react-icons/bs";
 import { SiDiscord } from "react-icons/si";
 import { HiMail } from "react-icons/hi";
+import { DiscordStatus } from "@utils/Functions/DiscordStatus";
 export const About: FC = () => {
+  let [details, setDetails] = useState<string | null>();
+  let [activity, setActivity] = useState<string | null>();
+  let [statusColor, setStatusColor] = useState<string | null>();
+  let [statusText, setStatusText] = useState<string | null>();
+
+  function pageDir(e: any) {
+    e.preventDefault();
+    window.document.getElementById(ID)?.classList.remove("hidden");
+  }
+
   useEffect(() => {
     let modal: any = window.document.getElementById(ID);
     window.onclick = function (event) {
@@ -18,87 +29,64 @@ export const About: FC = () => {
       }
     };
   });
-  function pageDir(e: any) {
-    e.preventDefault();
-    window.document.getElementById(ID)?.classList.remove("hidden");
-  }
-  let userid = DEFAULTS.DiscordUserID;
-  let scolor;
-  let activities;
-  let details;
-  let statuso;
-  const { loading, status } = useLanyard({
-    userId: userid,
-    socket: true,
-  });
-  if (!loading && status?.discord_status) {
-    switch (status.discord_status) {
-      case "dnd":
-        scolor = "#ff3640";
-        statuso = "Do not Disturb";
-        break;
-      case "online":
-        scolor = "#2afa62";
-        statuso = "Online";
-        break;
-      case "offline":
-        scolor = "#747F8D";
-        statuso = "Offline";
-        break;
-      case "idle":
-        scolor = "#eddf47";
-        statuso = "Idle";
-        break;
+
+  function LanyardInitializer() {
+    let userID = DEFAULTS.DiscordUserID;
+    const { loading, status } = useLanyard({
+      userId: userID,
+      socket: true,
+    });
+    if (!loading) {
+      console.log(status);
     }
-    if (!loading && status.activities.length > 0) {
-      switch (status.activities[0].name) {
-        case "Visual Studio Code":
-          details =
-            status.activities[0].state &&
-            status.activities[0].state.substring(0, 38);
-          activities = (
-            <p className="text-gray-400">
-              Coding on{" "}
-              <span className="text-gray-200">
-                {status.activities[0].details &&
-                  status.activities[0].details
-                    ?.split("|")[0]
-                    .replace("🖋️", "")
-                    .substring(0, 38)}
-              </span>{" "}
-              in <span className="text-gray-200">Vs Code</span>
-            </p>
-          );
-          break;
-        case "Spotify":
-          activities = (
-            <p data-tip data-for="zort" className="text-gray-400">
-              Listening{" "}
-              <span className="text-gray-200">
-                {status.activities[0].details &&
-                  status.activities[0].details?.substring(0, 38)}
-              </span>{" "}
-              on <span className="text-gray-200">Spotify</span>
-            </p>
-          );
-          details =
-            status.activities[0].state &&
-            status.activities[0].state.substring(0, 38);
-          break;
-      }
+
+    let discordStatus = status?.discord_status;
+    if (discordStatus) {
+      let { formattedStatus, color }: any = DiscordStatus(discordStatus);
+      if (statusText != formattedStatus) setStatusText(formattedStatus);
+      if (statusColor != color) setStatusColor(color);
+    }
+
+    let activities: any = status?.activities.filter(
+      (activity) => activity.id != "custom"
+    );
+    if (activities?.length > 0) {
+      let activityName = activities[0].name;
+      if (activity != activityName) setActivity(activityName);
+
+      let detailsName = activities[0].state;
+      if (detailsName && details != detailsName) setDetails(detailsName);
     }
   }
+
+  LanyardInitializer();
+
   return (
     <div className="lg:flex  justify-evenly">
       <div className="hidden lg:inline-block">
-      <PageDir />
+        <PageDir />
       </div>
       <div className="lg:hidden mt-10 flex text-center justify-center">
-      <Link href="/blog"><p className="text-white mr-5 bg-indigo-600 transition hover:bg-indigo-700 px-4 py-3 rounded -mt-3">Blogs</p></Link>
-      <a href="#aboutme" className="text-white transition mr-5 hover:text-white/80">About Me</a>
-      <a href="#projects" className="text-white transition hover:text-white/80 mr-5">Projects</a>
-      <a href="#repos" className="text-white transition hover:text-white/80">Repositories</a>
-
+        <Link href="/blog">
+          <p className="text-white mr-5 bg-indigo-600 transition hover:bg-indigo-700 px-4 py-3 rounded -mt-3">
+            Blogs
+          </p>
+        </Link>
+        <a
+          href="#aboutme"
+          className="text-white transition mr-5 hover:text-white/80"
+        >
+          About Me
+        </a>
+        <a
+          href="#projects"
+          className="text-white transition hover:text-white/80 mr-5"
+        >
+          Projects
+        </a>
+        <a href="#repos" className="text-white transition hover:text-white/80">
+          Repositories
+        </a>
       </div>
       <div className="lg:w-3/12 lg:min-w-max lg:ml-10 flex flex-col">
         <Tilt className="mt-16 w-60 mx-auto">
@@ -115,10 +103,10 @@ export const About: FC = () => {
             data-tip
             data-for="statuso"
             className="w-2.5	h-2.5 rounded-full text-gray-300 mt-2"
-            style={{ backgroundColor: scolor || "#747F8D" }}
+            style={{ backgroundColor: statusColor || "#747F8D" }}
           ></div>
           <p data-tip data-for="zort" className="ml-2 text-base text-gray-300">
-            {activities || "Nothing is playing right now"}
+            {activity || "Nothing is playing right now"}
           </p>
           <ReactTooltip
             place="left"
@@ -126,9 +114,9 @@ export const About: FC = () => {
             effect="solid"
             id="statuso"
           >
-            {statuso && statuso}
+            {statusText && statusText}
           </ReactTooltip>
-          {activities && (
+          {activity && (
             <ReactTooltip
               place="bottom"
               backgroundColor="black"

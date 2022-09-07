@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import { useEffect } from "react";
-import { GoBack } from "@components/Utils/GoBack";
+import { GoBack } from "@utils/GoBack";
 import hljs from "highlight.js";
 
 var showdown = require("showdown"),
@@ -15,16 +15,22 @@ const Slug = ({ data }: any) => {
   return (
     <div>
       <div className="ml-2 mt-2">
-        <GoBack url="/blog"/>
-        </div>
-    <main className="md:ml-20 mx-auto m-5 ">
-      <img src={data.photo} />
-      <h1 className="text-white">{data.title}</h1>
-      <div
-        className="prose text-white m-3 prose-h1:text-white prose-h2:text-white prose-h3:text-white prose-a:text-[#60A5FA] prose-a:no-underline	 prose-strong:text-white prose-code:rounded prose-code:overflow-auto prose-code:max-h-48"
-        dangerouslySetInnerHTML={{ __html: converter.makeHtml(data.content) }}
+        <GoBack url="/blog" />
+      </div>
+      <img
+        src={data.data.photo}
+        className="md:h-96 w-8/12 mx-auto rounded-md mt-10"
       />
-    </main>
+      {console.log(data.title)}
+      <p className="text-white text-center text-5xl font-bold mt-4">
+        {data.data.title}
+      </p>
+      <main className="md:ml-20 mx-auto m-5 ">
+        <div
+          className="prose text-white m-3 prose-h1:text-white prose-h2:text-white prose-h3:text-white prose-a:text-[#60A5FA] prose-a:no-underline	 prose-strong:text-white prose-code:rounded prose-code:overflow-auto prose-code:max-h-48"
+          dangerouslySetInnerHTML={{ __html: converter.makeHtml(data.content) }}
+        />
+      </main>
     </div>
   );
 };
