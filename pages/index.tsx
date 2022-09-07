@@ -12,7 +12,7 @@ const Main: NextPage = () => {
   useEffect(() => {
     if (typeof window != "undefined") {
       //if(!window.localStorage.getItem("Routeinfo")) {
-      toast("Please click the avatar for the page rootes", {
+      toast("Please click the avatar for the page routes", {
         theme: "dark",
       });
       //}
