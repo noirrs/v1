@@ -56,7 +56,7 @@ export const About: FC = () => {
         let detailsName = activities[0].state;
 
         if (activities[0].name == "Spotify") {
-          detailsName = activities[0].details + "-" + activities[0].state;
+          detailsName = activities[0].details + " - " + activities[0].state;
         }
         if (detailsName && details != detailsName) setDetails(detailsName);
       }
