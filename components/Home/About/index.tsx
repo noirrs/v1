@@ -37,25 +37,26 @@ export const About: FC = () => {
       socket: true,
     });
     if (!loading) {
-      console.log(status);
-    }
+      let discordStatus = status?.discord_status;
+      if (discordStatus) {
+        let { formattedStatus, color }: any = DiscordStatus(discordStatus);
+        if (statusText != formattedStatus) setStatusText(formattedStatus);
+        if (statusColor != color) setStatusColor(color);
+      }
 
-    let discordStatus = status?.discord_status;
-    if (discordStatus) {
-      let { formattedStatus, color }: any = DiscordStatus(discordStatus);
-      if (statusText != formattedStatus) setStatusText(formattedStatus);
-      if (statusColor != color) setStatusColor(color);
-    }
+      let activities: any = status?.activities.filter(
+        (activity) => activity.id != "custom"
+      );
+      if (activities?.length > 0) {
+        let activityName = activities[0].name;
+        if (activity != activityName) setActivity(activityName);
 
-    let activities: any = status?.activities.filter(
-      (activity) => activity.id != "custom"
-    );
-    if (activities?.length > 0) {
-      let activityName = activities[0].name;
-      if (activity != activityName) setActivity(activityName);
-
-      let detailsName = activities[0].state;
-      if (detailsName && details != detailsName) setDetails(detailsName);
+        let detailsName = activities[0].state;
+        if (activities[0].name == "Spotify") {
+          detailsName = activities[0].details + " " + activities[0].state;
+        }
+        if (detailsName && details != detailsName) setDetails(detailsName);
+      }
     }
   }
 

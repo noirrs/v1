@@ -21,7 +21,6 @@ const Slug = ({ data }: any) => {
         src={data.data.photo}
         className="md:h-96 w-8/12 mx-auto rounded-md mt-10"
       />
-      {console.log(data.title)}
       <p className="text-white text-center text-5xl font-bold mt-4">
         {data.data.title}
       </p>
