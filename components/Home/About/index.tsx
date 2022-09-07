@@ -5,11 +5,11 @@ import { DEFAULTS } from "../../../lib/stuffs";
 import ReactTooltip from "react-tooltip";
 import Tilt from "react-tilt";
 import Link from "next/link";
-import { PageDir, ID } from "@utils/Dialogs/pageDir";
+import { PageDir, ID } from "@components/utils/Dialogs/pageDir";
 import { BsGithub, BsLinkedin, BsSpotify, BsTwitter } from "react-icons/bs";
 import { SiDiscord } from "react-icons/si";
 import { HiMail } from "react-icons/hi";
-import { DiscordStatus } from "@utils/Functions/DiscordStatus";
+import { DiscordStatus } from "@components/utils/Functions/DiscordStatus";
 export const About: FC = () => {
   let [details, setDetails] = useState<string | null>();
   let [activity, setActivity] = useState<string | null>();

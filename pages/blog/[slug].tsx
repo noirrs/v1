@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import { useEffect } from "react";
-import { GoBack } from "@utils/GoBack";
+import { GoBack } from "@components/utils/GoBack";
 import hljs from "highlight.js";
 
 var showdown = require("showdown"),

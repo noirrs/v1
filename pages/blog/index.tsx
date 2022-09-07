@@ -3,7 +3,7 @@ import { Heads } from "@components/Head";
 import Tilt from "react-tilt";
 import Link from "next/link";
 import { BiTimeFive } from "react-icons/bi";
-import { GoBack } from "@utils/GoBack";
+import { GoBack } from "@components/utils/GoBack";
 const Blogs: NextPage = ({ a }: any) => {
   return (
     <div className="w-full h-screen">

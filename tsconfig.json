@@ -17,7 +17,7 @@
     "incremental": true,
     "paths": {
       "@components/*": ["./components/*"],
-      "@utils/*": ["./utils/*"]
+      "@utils/*": ["components/utils/*"]
     },
     "typeRoots": [
         "../node_modules/@types",
