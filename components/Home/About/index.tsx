@@ -69,7 +69,7 @@ export const About: FC = () => {
       </div>
       <div className="lg:hidden mt-10 flex text-center justify-center">
         <Link href="/blog">
-          <p className="text-white mr-5 bg-indigo-600 transition hover:bg-indigo-700 px-4 py-3 rounded -mt-3">
+          <p className="text-white mr-5 bg-indigo-600 transition hover:bg-indigo-700 px-4 py-3 rounded -mt-3 cursor-pointer">
             Blogs
           </p>
         </Link>
