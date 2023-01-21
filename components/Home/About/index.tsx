@@ -64,7 +64,7 @@ export const About: FC = () => {
   }
 
   LanyardInitializer();
-
+ 
   return (
     <div className="lg:flex  justify-evenly">
       <div className="hidden lg:inline-block">
